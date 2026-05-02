@@ -2,11 +2,11 @@ function App() {
   return (
     <div className="h-screen flex items-center justify-center">
       <div>
-      <h1 className="text-center text-3xl font-bold">Site sob construção!</h1>
-      <img
-        src="/src/assets/under-construction.gif"
-        alt="GIF de um desenho animado"
-      />
+        <h2 className="text-center text-2xl font-bold">Site sob construção!</h2>
+          <img
+            src="/under-construction.gif"
+            alt="GIF de um desenho animado"
+          />
       </div>
     </div>
   );
