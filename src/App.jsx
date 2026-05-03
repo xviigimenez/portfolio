@@ -1,3 +1,4 @@
+import { Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 
@@ -14,10 +15,18 @@ export function UnderConstruction() {
 
 export default function App() {
   return (
-    <>
-      <Header />
-      <Hero />
-      <UnderConstruction />
-    </>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <>
+            <Header />
+            <Hero />
+            <UnderConstruction />
+          </>
+        }
+      />
+      <Route path="/portfolio" element={<Navigate to="/" replace />} />
+    </Routes>
   );
 }
