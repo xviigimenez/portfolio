@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 flex items-center justify-between px-6 h-14 border-b border-gray-200">
+    <header className="sticky top-0 z-50 flex items-center justify-between px-6 h-14 bg-white border-b border-gray-200">
       <div>
         <h1 className="text-2xl">
           gustavo<span className="text-lg">.xyz.br</span>

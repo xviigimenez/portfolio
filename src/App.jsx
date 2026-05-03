@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Sobre from './components/Sobre';
 
 export function UnderConstruction() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
           <>
             <Header />
             <Hero />
+            <Sobre />
             <UnderConstruction />
           </>
         }
