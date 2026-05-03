@@ -17,7 +17,7 @@ export default function Header() {
           eventos
         </a>
         <a href="#contatos" className="text-lg text-gray-500 hover:text-black">
-          contatos
+          contato
         </a>
       </nav>
     </header>
