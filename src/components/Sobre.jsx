@@ -13,10 +13,10 @@ import {
   faUbuntu,
 } from '@fortawesome/free-brands-svg-icons';
 
-export function Tag({ nome, fundo, icone }) {
+export function Tag({ nome, fundoHover, fundoActive, icone }) {
   return (
     <div
-      className={`flex items-center py-px px-2 rounded-xl ${fundo} text-sm text-white`}
+      className={`flex items-center py-px px-2 rounded-xl bg-gray-500 ${fundoHover} ${fundoActive} transition-colors duration-300 text-sm text-white`}
     >
       <FontAwesomeIcon icon={icone} />
       {nome}
@@ -39,19 +39,60 @@ export default function Sobre() {
               Apaixonado por resolver problemas que possuem um impacto real.
             </p>
             <div className="flex flex-wrap gap-2">
-              <Tag nome={'React'} fundo={'bg-sky-400'} icone={faReact} />
-              <Tag nome={'Debian'} fundo={'bg-pink-700'} icone={faDebian} />
-              <Tag nome={'Ubuntu'} fundo={'bg-orange-500'} icone={faUbuntu} />
-              <Tag nome={'Arch'} fundo={'bg-sky-500'} icone={faArchLinux} />
-              <Tag nome={'Python'} fundo={'bg-amber-400'} icone={faPython} />
-              <Tag nome={'Node.js'} fundo={'bg-green-700'} icone={faNodeJs} />
+              <Tag
+                nome={'React'}
+                fundoHover={'hover:bg-sky-400'}
+                fundoActive={'active:bg-sky-400'}
+                icone={faReact}
+              />
+              <Tag
+                nome={'Debian'}
+                fundoHover={'hover:bg-pink-700'}
+                fundoActive={'active:bg-pink-700'}
+                icone={faDebian}
+              />
+              <Tag
+                nome={'Ubuntu'}
+                fundoHover={'hover:bg-orange-500'}
+                fundoActive={'active:bg-orange-500'}
+                icone={faUbuntu}
+              />
+              <Tag
+                nome={'Arch'}
+                fundoHover={'hover:bg-sky-500'}
+                fundoActive={'active:bg-sky-500'}
+                icone={faArchLinux}
+              />
+              <Tag
+                nome={'Python'}
+                fundoHover={'hover:bg-amber-400'}
+                fundoActive={'active:bg-amber-400'}
+                icone={faPython}
+              />
+              <Tag
+                nome={'Node.js'}
+                fundoHover={'hover:bg-green-700'}
+                fundoActive={'active:bg-green-700'}
+                icone={faNodeJs}
+              />
               <Tag
                 nome={'TailwindCSS'}
-                fundo={'bg-cyan-400'}
+                fundoHover={'hover:bg-cyan-400'}
+                fundoActive={'active:bg-cyan-400'}
                 icone={faTailwindCss}
               />
-              <Tag nome={'JavaScript'} fundo={'bg-yellow-400'} icone={faJs} />
-              <Tag nome={'Figma'} fundo={'bg-pink-500'} icone={faFigma} />
+              <Tag
+                nome={'JavaScript'}
+                fundoHover={'hover:bg-yellow-400'}
+                fundoActive={'active:bg-yellow-400'}
+                icone={faJs}
+              />
+              <Tag
+                nome={'Figma'}
+                fundoHover={'hover:bg-pink-500'}
+                fundoActive={'active:bg-pink-500'}
+                icone={faFigma}
+              />
             </div>
           </div>
         </section>
