@@ -15,8 +15,8 @@ export function Endereco({ icone, link, texto }) {
 
 export default function Contato() {
   return (
-    <section id="contato" className="py-16">
-      <h2 className="text-3xl text-center font-bold py-2">Contato</h2>
+    <section id="contato" className="pt-32 pb-16">
+      <h2 className="text-3xl text-center py-4">Contato</h2>
       <p className="text-center">Vamos conversar e tomar um café?</p>
       <div className="flex justify-center gap-8 py-4">
         <Endereco

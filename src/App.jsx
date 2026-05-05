@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Sobre from './components/Sobre';
 import Projetos from './components/Projetos';
 import Contato from './components/Contato';
+import Footer from './components/Footer';
 
 export function UnderConstruction() {
   return (
@@ -28,7 +29,7 @@ export default function App() {
             <Sobre />
             <Projetos />
             <Contato />
-            <UnderConstruction />
+            <Footer />
           </>
         }
       />
