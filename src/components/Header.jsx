@@ -16,7 +16,7 @@ export default function Header() {
         <a href="#eventos" className="text-lg text-gray-500 hover:text-black">
           eventos
         </a>
-        <a href="#contatos" className="text-lg text-gray-500 hover:text-black">
+        <a href="#contato" className="text-lg text-gray-500 hover:text-black">
           contato
         </a>
       </nav>

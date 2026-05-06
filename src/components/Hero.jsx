@@ -10,13 +10,13 @@ export default function Hero() {
       <div className="flex gap-8">
         <a
           href="#projetos"
-          className="border-b-2 border-gray-500 p-2 hover:text-gray-500 hover:bg-gray-200"
+          className="border-b-2 border-gray-500 p-2 hover:text-gray-500 hover:bg-gray-200 transition-color duration-150"
         >
           Projetos
         </a>
         <a
           href="#"
-          className="border-b-2 border-gray-500 p-2 hover:text-gray-500 hover:bg-gray-200"
+          className="border-b-2 border-gray-500 p-2 hover:text-gray-500 hover:bg-gray-200 transition-color duration-150"
         >
           Currículo
         </a>
