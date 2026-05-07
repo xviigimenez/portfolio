@@ -1,6 +1,9 @@
 export default function Hero() {
   return (
-    <section className="h-[calc(100vh-3.5rem)] flex flex-col justify-center items-center md:gap-4 gap-8 p-6">
+    <section
+      id="hero"
+      className="h-[calc(100vh-3.5rem)] flex flex-col justify-center items-center md:gap-4 gap-8 p-6"
+    >
       <h1 className="md:text-4xl text-3xl text-center font-bold text-black">
         Gustavo Gimenez Correa
       </h1>
