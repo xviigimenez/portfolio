@@ -16,19 +16,21 @@ export default function Header() {
           }
         });
 
-        navLinks.forEach((l) =>
-          l.classList.replace('text-black', 'text-gray-500'),
-        );
+        navLinks.forEach((l) => {
+          l.classList.replace('text-black', 'text-gray-500');
+          l.classList.add('hidden');
+        });
 
         for (const id of visibleSections) {
           const link = document.querySelector(`nav a[href="#${id}"]`);
           if (link) {
             link.classList.replace('text-gray-500', 'text-black');
+            link.classList.remove('hidden');
             break;
           }
         }
       },
-      { threshold: 0.9 },
+      { rootMargin: '-50% 0px -50% 0px', threshold: 0 },
     );
 
     sections.forEach((sec) => observer.observe(sec));
@@ -42,17 +44,23 @@ export default function Header() {
           gustavo<span className="text-lg">.xyz.br</span>
         </h1>
       </div>
-      <nav className="hidden md:flex items-center gap-4">
-        <a href="#sobre" className="text-lg text-gray-500 hover:text-black">
+      <nav className="flex items-center gap-4">
+        <a
+          href="#sobre"
+          className="hidden md:block text-lg text-gray-500 hover:text-black"
+        >
           sobre
         </a>
-        <a href="#projetos" className="text-lg text-gray-500 hover:text-black">
+        <a
+          href="#projetos"
+          className="hidden md:block text-lg text-gray-500 hover:text-black"
+        >
           projetos
         </a>
-        <a href="#eventos" className="text-lg text-gray-500 hover:text-black">
-          eventos
-        </a>
-        <a href="#contato" className="text-lg text-gray-500 hover:text-black">
+        <a
+          href="#contato"
+          className="hidden md:block text-lg text-gray-500 hover:text-black"
+        >
           contato
         </a>
       </nav>

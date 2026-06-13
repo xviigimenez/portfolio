@@ -18,7 +18,7 @@ export default function Projetos() {
       id="projetos"
       className="px-8 py-16 grayscale hover:grayscale-0 active:grayscale-0 transition-color md:duration-900 duration-300"
     >
-      <h2 className="text-3xl text-center py-16">Projetos</h2>
+      <h2 className="text-3xl text-center py-12">Projetos</h2>
       <div className="flex md:flex-row flex-col items-center justify-center gap-8">
         <Projeto
           imagem="/advice-generator.png"

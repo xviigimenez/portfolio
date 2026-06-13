@@ -66,7 +66,7 @@ export default function Sobre() {
       <div className="flex justify-center">
         <section
           id="sobre"
-          className="flex md:flex-row flex-col items-center gap-6 md:w-1/2 w-full py-16 px-8"
+          className="flex md:flex-row flex-col items-center gap-6 md:w-1/2 w-full py-20 px-8"
         >
           <img src="/profile.jpg" className="size-32 rounded-full"></img>
           <div className="flex flex-col gap-4 w-full">
