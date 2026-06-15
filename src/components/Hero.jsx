@@ -12,10 +12,12 @@ export default function Hero({ onVerCurriculo }) {
       </h2>
       <div className="flex gap-8">
         <a
-          href="#projetos"
+          href="https://github.com/xviigimenez"
+          target="_blank"
+          rel="noopener noreferrer"
           className="border-b-2 border-gray-500 p-2 hover:text-gray-500 hover:bg-gray-200 transition-color duration-150"
         >
-          Projetos
+          GitHub
         </a>
         <a
           onClick={onVerCurriculo}
