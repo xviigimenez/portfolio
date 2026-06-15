@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -5,6 +6,7 @@ import Sobre from './components/Sobre';
 import Projetos from './components/Projetos';
 import Contato from './components/Contato';
 import Footer from './components/Footer';
+import Curriculo from './components/Curriculo';
 
 export function UnderConstruction() {
   return (
@@ -18,6 +20,8 @@ export function UnderConstruction() {
 }
 
 export default function App() {
+  const [modo, setModo] = useState('landing');
+
   return (
     <Routes>
       <Route
@@ -25,10 +29,19 @@ export default function App() {
         element={
           <>
             <Header />
-            <Hero />
-            <Sobre />
-            <Projetos />
-            <Contato />
+            {modo === 'landing' && (
+              <>
+                <Hero onVerCurriculo={() => setModo('curriculo')} />
+                <Sobre />
+                <Projetos />
+                <Contato />
+              </>
+            )}
+            {modo === 'curriculo' && (
+              <>
+                <Curriculo onVerLanding={() => setModo('landing')} />
+              </>
+            )}
             <Footer />
           </>
         }

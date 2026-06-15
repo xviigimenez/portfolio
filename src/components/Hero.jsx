@@ -1,4 +1,4 @@
-export default function Hero() {
+export default function Hero({ onVerCurriculo }) {
   return (
     <section
       id="hero"
@@ -18,6 +18,7 @@ export default function Hero() {
           Projetos
         </a>
         <a
+          onClick={onVerCurriculo}
           href="#"
           className="border-b-2 border-gray-500 p-2 hover:text-gray-500 hover:bg-gray-200 transition-color duration-150"
         >
