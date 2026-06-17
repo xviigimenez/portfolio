@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Sobre from './components/Sobre';
@@ -29,19 +30,27 @@ export default function App() {
         element={
           <>
             <Header onVerLanding={() => setModo('landing')} modo={modo} />
-            {modo === 'landing' && (
-              <>
-                <Hero onVerCurriculo={() => setModo('curriculo')} />
-                <Sobre />
-                <Projetos />
-                <Contato />
-              </>
-            )}
-            {modo === 'curriculo' && (
-              <>
-                <Curriculo onVerLanding={() => setModo('landing')} />
-              </>
-            )}
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={modo}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.3 }}
+              >
+                {modo === 'landing' && (
+                  <>
+                    <Hero onVerCurriculo={() => setModo('curriculo')} />
+                    <Sobre />
+                    <Projetos />
+                    <Contato />
+                  </>
+                )}
+                {modo === 'curriculo' && (
+                  <Curriculo onVerLanding={() => setModo('landing')} />
+                )}
+              </motion.div>
+            </AnimatePresence>
             <Footer />
           </>
         }
