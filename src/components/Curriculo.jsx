@@ -84,8 +84,7 @@ export default function Curriculo({ onVerLanding }) {
         </div>
         <a
           onClick={onVerLanding}
-          href="#"
-          className="border-b-2 border-gray-500 p-2 hover:text-gray-500 hover:bg-gray-200 transition-color duration-150"
+          className="border-b-2 border-gray-500 p-2 hover:text-gray-500 hover:bg-gray-200 transition-color duration-150 cursor-pointer"
         >
           Voltar
         </a>

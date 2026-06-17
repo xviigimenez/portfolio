@@ -28,7 +28,7 @@ export default function App() {
         path="/"
         element={
           <>
-            <Header />
+            <Header onVerLanding={() => setModo('landing')} modo={modo} />
             {modo === 'landing' && (
               <>
                 <Hero onVerCurriculo={() => setModo('curriculo')} />

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-export default function Header() {
+export default function Header({ onVerLanding, modo }) {
   useEffect(() => {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('nav a');
@@ -41,28 +41,40 @@ export default function Header() {
     <header className="sticky top-0 z-50 flex items-center justify-between px-6 h-14 bg-white border-b border-gray-200">
       <div>
         <h1 className="text-2xl">
-          gustavo<span className="text-lg">.xyz.br</span>
+          <button
+            onClick={() => {
+              if (modo === 'curriculo') onVerLanding();
+              else window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            className="hover:text-gray-500 transition-colors cursor-pointer"
+          >
+            gustavo<span className="text-lg">.xyz.br</span>
+          </button>
         </h1>
       </div>
       <nav className="flex items-center gap-4">
-        <a
-          href="#sobre"
-          className="hidden md:block text-lg text-gray-500 hover:text-black"
-        >
-          sobre
-        </a>
-        <a
-          href="#projetos"
-          className="hidden md:block text-lg text-gray-500 hover:text-black"
-        >
-          projetos
-        </a>
-        <a
-          href="#contato"
-          className="hidden md:block text-lg text-gray-500 hover:text-black"
-        >
-          contato
-        </a>
+        {modo === 'landing' && (
+          <>
+            <a
+              href="#sobre"
+              className="hidden md:block text-lg text-gray-500 hover:text-black"
+            >
+              sobre
+            </a>
+            <a
+              href="#projetos"
+              className="hidden md:block text-lg text-gray-500 hover:text-black"
+            >
+              projetos
+            </a>
+            <a
+              href="#contato"
+              className="hidden md:block text-lg text-gray-500 hover:text-black"
+            >
+              contato
+            </a>
+          </>
+        )}
       </nav>
     </header>
   );

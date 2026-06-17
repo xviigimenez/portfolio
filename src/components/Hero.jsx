@@ -21,8 +21,7 @@ export default function Hero({ onVerCurriculo }) {
         </a>
         <a
           onClick={onVerCurriculo}
-          href="#"
-          className="border-b-2 border-gray-500 p-2 hover:text-gray-500 hover:bg-gray-200 transition-color duration-150"
+          className="border-b-2 border-gray-500 p-2 hover:text-gray-500 hover:bg-gray-200 transition-color duration-150 cursor-pointer"
         >
           Currículo
         </a>
