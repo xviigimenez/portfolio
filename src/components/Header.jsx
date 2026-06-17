@@ -1,9 +1,13 @@
 import { useEffect } from 'react';
 
 export default function Header({ onVerLanding, modo }) {
+  const descerPara = (id) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   useEffect(() => {
     const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('nav a');
+    const navLinks = document.querySelectorAll('nav button');
     const visibleSections = new Set();
 
     const observer = new IntersectionObserver(
@@ -22,7 +26,10 @@ export default function Header({ onVerLanding, modo }) {
         });
 
         for (const id of visibleSections) {
-          const link = document.querySelector(`nav a[href="#${id}"]`);
+          const link = [...navLinks].find(
+            // Texto do botão deve ser igual ao nome da section
+            (btn) => btn.textContent.trim() === id,
+          );
           if (link) {
             link.classList.replace('text-gray-500', 'text-black');
             link.classList.remove('hidden');
@@ -55,24 +62,24 @@ export default function Header({ onVerLanding, modo }) {
       <nav className="flex items-center gap-4">
         {modo === 'landing' && (
           <>
-            <a
-              href="#sobre"
-              className="hidden md:block text-lg text-gray-500 hover:text-black"
+            <button
+              onClick={() => descerPara('sobre')}
+              className="hidden md:block text-lg text-gray-500 hover:text-black cursor-pointer"
             >
               sobre
-            </a>
-            <a
-              href="#projetos"
-              className="hidden md:block text-lg text-gray-500 hover:text-black"
+            </button>
+            <button
+              onClick={() => descerPara('projetos')}
+              className="hidden md:block text-lg text-gray-500 hover:text-black cursor-pointer"
             >
               projetos
-            </a>
-            <a
-              href="#contato"
-              className="hidden md:block text-lg text-gray-500 hover:text-black"
+            </button>
+            <button
+              onClick={() => descerPara('contato')}
+              className="hidden md:block text-lg text-gray-500 hover:text-black cursor-pointer"
             >
               contato
-            </a>
+            </button>
           </>
         )}
       </nav>
