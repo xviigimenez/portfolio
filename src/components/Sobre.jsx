@@ -68,11 +68,17 @@ export default function Sobre() {
           id="sobre"
           className="flex md:flex-row flex-col items-center gap-6 min-h-[500px] md:w-1/2 w-full py-20 px-8"
         >
-          <img src="/profile.jpg" className="size-32 rounded-full"></img>
+          <img src="/gustavo.png" className="size-36 rounded-full"></img>
           <div className="flex flex-col gap-4 w-full">
             <h2 className="text-xl font-bold">Sobre</h2>
             <p>
-              Apaixonado por resolver problemas que possuem um impacto real.
+              Apaixonado por tecnologia, mas motivado verdadeiramente pelas
+              pessoas que a utilizam. Tenho experiência em desenvolvimento,
+              design, implantação de sistemas e comunicação, unindo visão
+              técnica e sensibilidade humana para trazer soluções intuitivas e
+              alinhadas às necessidades reais dos usuários. No tempo livre, ouço
+              jazz, pratico ciclismo e - modéstia à parte - faço o melhor coado
+              que conheço.
             </p>
             <div className="flex flex-wrap gap-2">
               <Tag
