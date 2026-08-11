@@ -1,13 +1,13 @@
-import { useState } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useState } from 'react';
+import { Navigate, Route, Routes } from 'react-router-dom';
+import Contato from './components/Contato';
+import Curriculo from './components/Curriculo';
+import Footer from './components/Footer';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Sobre from './components/Sobre';
 import Projetos from './components/Projetos';
-import Contato from './components/Contato';
-import Footer from './components/Footer';
-import Curriculo from './components/Curriculo';
+import Sobre from './components/Sobre';
 
 export default function App() {
   const [modo, setModo] = useState('landing');
