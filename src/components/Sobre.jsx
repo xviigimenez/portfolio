@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faArchLinux,
   faDebian,
@@ -13,6 +11,8 @@ import {
   faTailwindCss,
   faUbuntu,
 } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useEffect } from 'react';
 
 export function Tag({ nome, corFundo, fundoHover, fundoActive, icone }) {
   return (
