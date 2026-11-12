@@ -1,5 +1,4 @@
-import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faCoffee, faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Footer() {
